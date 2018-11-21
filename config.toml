@@ -10,8 +10,8 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+disqusShortname = "cowboysysop"
+googleAnalytics = "UA-129648198-1"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
@@ -43,7 +43,7 @@ pygmentsCodefencesGuessSyntax = true
 #  desc = "Hexagon"
 
 [Author]
-  name = "Some Person"
+  name = "Sebastien Prud'homme"
   website = "yourwebsite.com"
   email = "youremail@domain.com"
   facebook = "username"
