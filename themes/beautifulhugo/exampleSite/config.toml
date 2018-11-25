@@ -24,6 +24,7 @@ pygmentsCodefencesGuessSyntax = true
   comments = true
   readingTime = true
   wordCount = true
+  fuzzyWordCount = false
   useHLJS = true
   socialShare = true
   delayDisqus = true

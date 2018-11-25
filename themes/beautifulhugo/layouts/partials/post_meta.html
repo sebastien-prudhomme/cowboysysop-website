@@ -11,6 +11,9 @@
   {{ if .Site.Params.wordCount }}
     &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
   {{ end }}
+  {{ if .Site.Params.fuzzyWordCount }}
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;{{ .FuzzyWordCount }}&nbsp;{{ i18n "words" }}
+  {{ end }}
   {{ if .Params.author }}
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Params.author | safeHTML }}
   {{ else }}
