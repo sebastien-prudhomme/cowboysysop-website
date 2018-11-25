@@ -45,7 +45,7 @@ googleAnalytics = "UA-129648198-1"
 
 [Author]
   name = "Sébastien Prud'homme"
-  website = "www.cowboysysop.com"
+  website = "https://www.cowboysysop.com"
   email = "sebastien.prudhomme@gmail.com"
   github = "sebastien-prudhomme"
   gitlab = "sebastien.prudhomme"
