@@ -1,8 +1,8 @@
 # Content
 - id: dateFormat
-  translation: "January 2, 2006"
+  translation: "2 January 2006"
 - id: shortdateFormat
-  translation: "2 Jan, 2006 15:04:05"
+  translation: "2 Jan 2006 15:04:05"
 - id: postedOnDate
   translation: "Posté le {{ .Count }}"
 - id: lastModified
@@ -12,15 +12,15 @@
 - id: translationsSeparator
   translation: ", "
 - id: readMore
-  translation: "Voir plus"
+  translation: "Lire plus"
 - id: olderPosts
-  translation: "Anciens posts"
+  translation: "Anciens billets"
 - id: newerPosts
-  translation: "Nouveaux posts"
+  translation: "Nouveaux billets"
 - id: previousPost
-  translation: "Post précédent"
+  translation: "Billet précédent"
 - id: nextPost
-  translation: "Post suivant"
+  translation: "Billet suivant"
 - id: readTime
   translation: "minutes"
 - id: words
@@ -33,7 +33,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: 'Carbure avec <a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+  translation: 'Propulsé par <a href="http://gohugo.io">Hugo</a> &nbsp;&bull;&nbsp; Thème par <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
 
 # Navigation
 - id: toggleNavigation
