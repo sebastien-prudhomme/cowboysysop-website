@@ -80,7 +80,7 @@ Troubleshooting and Debugging Commands:
   auth           Inspect authorization
 
 Advanced Commands:
-  apply          Appliquer une configuration à une ressource par nom de fichier ou depuis stdin
+  apply          Apply a configuration to a resource by filename or stdin
   patch          Update field(s) of a resource using strategic merge patch
   replace        Replace a resource by filename or stdin
   wait           Experimental: Wait for one condition on one or many resources
@@ -88,14 +88,14 @@ Advanced Commands:
 
 Settings Commands:
   label          Update the labels on a resource
-  annotate       Mettre à jour les annotations d'une ressource
+  annotate       Update the annotations on a resource
   completion     Output shell completion code for the specified shell (bash or zsh)
 
 Other Commands:
   alpha          Commands for features in alpha
   api-resources  Print the supported API resources on the server
   api-versions   Print the supported API versions on the server, in the form of "group/version"
-  config         Modifier des fichiers kubeconfig
+  config         Modify kubeconfig files
   plugin         Runs a command-line plugin
   version        Print the client and server version information
 
