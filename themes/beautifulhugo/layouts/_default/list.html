@@ -25,7 +25,7 @@
               </p>
               <div class="post-entry">
                 {{ if .Truncated }}
-                  {{ .Summary }}
+                  {{ .Summary | truncate 200 }}
                   <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
                 {{ else }}
                   {{ .Content }}
