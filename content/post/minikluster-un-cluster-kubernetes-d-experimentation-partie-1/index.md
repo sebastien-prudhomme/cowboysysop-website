@@ -263,7 +263,7 @@ Il possède plusieurs atouts non négligeables par rapport à d’autres méthod
 
 Pour son installation, comme pour Docker Machine, je vous renvoie à la documentation officielle : https://rancher.com/docs/rke/v0.1.x/en/installation/#download-the-rke-binary
 
-**Attention** : bien faire attention à télécharger la version 0.1.9 pour rester compatible avec cet article.
+**Attention** : veillez à télécharger la version 0.1.9 pour rester compatible avec cet article.
 
 Comme pour les outils précédemment installés, vous pouvez ensuite exécuter le binaire pour vérifier son fonctionnement et ses commandes :
 
