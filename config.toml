@@ -60,3 +60,9 @@ googleAnalytics = "UA-129648198-1"
     name = "Tags"
     url = "tags"
     weight = 2
+
+[languages]
+  [languages.fr]
+    weight = 1
+  [languages.en]
+    weight = 2
