@@ -33,7 +33,9 @@ Le seul élément de Kubernetes nécessaire sur le poste client est l’outil en
 
 Pour son installation, je vous suggère de passer par cette méthode de la documentation officielle : https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl
 
+{{% warning %}}
 **Attention** : veillez à sélectionner la version 1.11.1 pour ne pas avoir de mauvaise surprise dans la suite de cet article.
+{{% /warning %}}
 
 Une fois installé, vous pouvez le lancer pour vérifier qu’il fonctionne et vous rendre compte des différentes commandes qu’il propose :
 
@@ -116,7 +118,9 @@ Il est compatible avec un grand nombre de fournisseurs de virtualisation cloud o
 
 Pour son installation, je vous renvoie à la documentation officielle : https://docs.docker.com/machine/install-machine/
 
+{{% warning %}}
 **Attention** : veillez à sélectionner la version 0.15.0 pour ne pas avoir de mauvaise surprise dans la suite de cet article.
+{{% /warning %}}
 
 Comme pour Kubectl, vous pouvez vérifier son fonctionnement en le lançant sans option particulière :
 
@@ -263,7 +267,9 @@ Il possède plusieurs atouts non négligeables par rapport à d’autres méthod
 
 Pour son installation, comme pour Docker Machine, je vous renvoie à la documentation officielle : https://rancher.com/docs/rke/v0.1.x/en/installation/#download-the-rke-binary
 
+{{% warning %}}
 **Attention** : veillez à télécharger la version 0.1.9 pour rester compatible avec cet article.
+{{% /warning %}}
 
 Comme pour les outils précédemment installés, vous pouvez ensuite exécuter le binaire pour vérifier son fonctionnement et ses commandes :
 
