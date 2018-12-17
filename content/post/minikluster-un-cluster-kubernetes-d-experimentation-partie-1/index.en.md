@@ -9,7 +9,7 @@ tags:
 
 In this series of articles we will install a local Kubernetes cluster for experimentation.
 
-There are certainly solutions like [Minikube](https://kubernetes.io/docs/setup/minikube/) or [Minishift](https://www.okd.io/minishift/) that already allow to easily install Kubernetes on a local computer but none to my knowledge proposes to install a cluster with several nodes as we will do.
+There are certainly solutions like [Minikube](https://kubernetes.io/docs/setup/minikube/) or [Minishift](https://www.okd.io/minishift/) that already allow to easily install Kubernetes on a local station but none to my knowledge proposes to install a cluster with several nodes as we will do.
 
 At first we will perform an installation of Kubernetes using the command line, without more automation than that. We will help with this the Docker Machine tool, the Linux RancherOS distribution and finally the Rancher Kubernetes Engine (RKE) tool.
 
@@ -23,7 +23,7 @@ In order to proceed with the installation of our Kubernetes cluster, the followi
 * the [VirtualBox](https://www.virtualbox.org/) virtualization solution installed and functional on the Linux computer (I will not go into the details, you will find everything you need on the official website)
 * basic knowledge of Docker containers and Kubernetes Orchestrator
 
-The software used later is multi-platform, installation on another type of OS (Mac OS, Windows) or on another hypervisor (KVM, VMware Fusion) should be possible by adapting the procedure.
+The software used later is multi-platform, an installation on another type of OS (Mac OS, Windows) or on another hypervisor (KVM, VMware Fusion) should be possible by adapting the procedure.
 
 ## Kubernetes
 
@@ -481,7 +481,7 @@ INFO[0308] Finished building Kubernetes cluster successfully
 
 The command will also create a `kube_config_cluster.yml` configuration file in the current directory containing the information needed to connect to the Kubernetes cluster that has just been deployed.
 
-In order to check that everything is operational, we can for example retrieve the list of nodes that participate in the operation of the Kubernetes cluster:
+In order to verify that everything is operational, we can for example retrieve the list of nodes that participate in the operation of the Kubernetes cluster:
 
 ```shell
 $ kubectl --kubeconfig=kube_config_cluster.yml get nodes
