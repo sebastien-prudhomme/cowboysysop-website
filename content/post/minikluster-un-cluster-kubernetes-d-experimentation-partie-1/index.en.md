@@ -489,7 +489,7 @@ NAME            STATUS    ROLES                      AGE       VERSION
 minikluster-1   Ready     controlplane,etcd,worker   4m        v1.11.1
 ```
 
-We can also retrieve the list of pods from the kube-system namespace:
+We can also retrieve the list of pods from the `kube-system` namespace:
 
 ```shell
 $ kubectl --kubeconfig kube_config_cluster.yml --namespace kube-system get pods
