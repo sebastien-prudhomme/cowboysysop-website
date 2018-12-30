@@ -1,6 +1,7 @@
 ---
 title: "Minikluster : un cluster Kubernetes d’expérimentation (partie 1)"
 date: 2018-10-27
+image: post/minikluster-un-cluster-kubernetes-d-experimentation-partie-1/ammiel-jr-447538-unsplash.jpg
 bigimg:
 - src: ammiel-jr-447538-unsplash.jpg
 tags:
