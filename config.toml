@@ -15,7 +15,7 @@ googleAnalytics = "UA-129648198-1"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "Build a beautiful and simple website in minutes"
+#  subtitle = "Build a beautiful and simple website in minutes"
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
   commit = false
