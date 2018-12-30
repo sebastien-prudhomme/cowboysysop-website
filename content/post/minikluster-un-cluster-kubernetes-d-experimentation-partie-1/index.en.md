@@ -1,6 +1,8 @@
 ---
 title: "Minikluster: a Kubernetes Experimentation Cluster (part 1)"
 date: 2018-10-27
+bigimg:
+- src: ammiel-jr-447538-unsplash.jpg
 tags:
 - Docker
 - Kubernetes
