@@ -378,7 +378,7 @@ footer .theme-by {
 }
 .post-preview .post-meta a,
 .post-heading .post-meta a {
-  color: #404040;
+  color: #808080;
   text-decoration: none;
 }
 .post-preview .post-entry {
@@ -549,6 +549,9 @@ footer .theme-by {
   -moz-box-shadow: 1px 1px 3px #000;
 }
 .intro-header.big-img .post-heading .post-meta {
+  color: #EEE;
+}
+.intro-header.big-img .post-heading .post-meta a {
   color: #EEE;
 }
 .intro-header.big-img .img-desc {
