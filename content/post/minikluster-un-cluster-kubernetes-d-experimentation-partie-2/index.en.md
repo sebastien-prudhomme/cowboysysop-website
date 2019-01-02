@@ -1,7 +1,8 @@
 ---
-title: "Minikluster: a cluster Kubernetes experimentation (part 2)"
+title: "Minikluster: a Kubernetes cluster for experimentation (part 2)"
+url: en/post/minikluster-a-kubernetes-cluster-for-experimentation-part-2
 date: 2018-12-29
-image: post/minikluster-un-cluster-kubernetes-d-experimentation-partie-2/chuttersnap-255215-unsplash.jpg
+image: post/minikluster-a-kubernetes-cluster-for-experimentation-part-2/chuttersnap-255215-unsplash.jpg
 bigimg:
 - src: chuttersnap-255215-unsplash.jpg
 tags:
