@@ -11,20 +11,20 @@ tags:
 - Rancher
 ---
 
-Following the construction of our Kubernetes Experiment cluster: a small intermission to show you how to easily add a virtual machine to the Kubernetes cluster and how to update the Kubernetes version.
+Continuation of the construction of our Kubernetes cluster for experimentation: a small intermission to show you how to easily add a virtual machine to the Kubernetes cluster and how to update the Kubernetes version.
 
 ## Preparing a new virtual machine
 
-We will first create a new virtual machine with the help of Docker Machine by providing it with the same features as the existing virtual machine:
+We will first create a new virtual machine with the help of Docker Machine by providing it the same parameters as the existing virtual machine:
 
 * the virtualization solution used: VirtualBox
-* the download address of the ISO image of RancherOS (here in version 1.4.1)
+* the download URL of the RancherOS ISO image (here in version 1.4.1
 * the number of CPUs of the virtual machine: 1
 * the size of the virtual machine disk: about 10 GB
 * the size of the virtual machine memory: 2 GB
 * the name of the virtual machine: minikluster-2
 
-I will spare you for this time the detail of the return of the order:
+I will spare you for this time the details of the return of the command:
 
 ```shell
 $ docker-machine create --driver virtualbox --virtualbox-boot2docker-url https://github.com/rancher/os/releases/download/v1.4.1/rancheros.iso --virtualbox-cpu-count 1 --virtualbox-disk-size 10000 --virtualbox-memory 2048 minikluster-2
@@ -49,7 +49,7 @@ minikluster-2   -        virtualbox   Running   tcp://192.168.99.101:2376       
 
 The first step in expanding our cluster is to edit the `cluster.yml` file previously created in the current directory to add our new virtual machine to the `nodes` list.
 
-Unlike our first machine, we will only worker the `worker` role to the new machine so that it is only responsible for the execution of Kubernetes orchestrated Docker containers and not for the same cluster management (role `controlplane`), nor hosting the internal cluster database (role `etcd`):
+Unlike our first machine, we will only assign the `worker` role to the new machine so that it is only responsible for the execution of Kubernetes orchestrated Docker containers and not for the cluster management (`controlplane` role), nor for hosting the internal cluster database (`etcd` role):
 
 ```yaml
 nodes:
@@ -68,7 +68,7 @@ nodes:
   labels: {}
 ```
 
-The second step is to restart the Kubernetes cluster deployment command with the RKE tool, the latter being responsible for reconciling the expected state of the cluster expressed in the `cluster.yml` file with the actual state of the cluster:
+The second step is to relauch the Kubernetes cluster deployment command with the RKE tool, this one being responsible for reconciling the expected state of the cluster expressed in the `cluster.yml` file with the actual state of the cluster:
 
 ```shell
 $ rke up
@@ -198,7 +198,7 @@ minikluster-1   Ready     controlplane,etcd,worker   27d       v1.11.1
 minikluster-2   Ready     worker                     4m        v1.11.1
 ```
 
-We can also see that the list of pods in the `kube-system` namespace now contains a new pod created by the daemonset `canal` and which is essential for the operation of the Kubernetes network layer on our new virtual machine:
+We can also see that the list of pods in the `kube-system` namespace now contains a new pod created by the `canal` daemonset and which is essential for the operation of the Kubernetes network layer on our new virtual machine:
 
 ```shell
 $ kubectl --kubeconfig kube_config_cluster.yml --namespace kube-system get pods
@@ -216,15 +216,15 @@ rke-network-plugin-deploy-job-nwgz9       0/1       Completed   0          27d
 
 ## Upgrading the cluster
 
-Now that we have expanded our cluster, we will just as easily upgrade the Kubernetes software.
+Now that we have expanded our cluster, we will as easily upgrade the Kubernetes software.
 
-The first thing to know is that each version of the RKE tool offers the installation of different versions of Kubernetes, one of which is installed by default.
+The first thing to know is that each version of the RKE tool allows the installation of different versions of Kubernetes, one of which is installed by default.
 
-For version 0.1.9 of RKE, the version of Kubernetes by default is version 1.11.1 as we can for example see when we retrieve the list of nodes of the cluster.
+For version 0.1.9 of RKE, the default version of Kubernetes is version 1.11.1 as we can see it for instance when we retrieve the list of nodes in the cluster.
 
 We will now get RKE version 0.1.14: https://github.com/rancher/rke/releases/tag/v0.1.14
 
-The following command allows us to display the version of Kubernetes installed by default as well as the so-called system images that RKE will use to build the cluster:
+The following command allows us to display the version of Kubernetes installed by default as well as the system images that RKE will use to build the cluster:
 
 ```shell
 $ rke config --system-images
@@ -249,9 +249,9 @@ rancher/nginx-ingress-controller-defaultbackend:1.4
 rancher/metrics-server-amd64:v0.2.1
 ```
 
-For version 0.1.14 of RKE, the version of Kubernetes by default is version 1.11.5.
+For version 0.1.14 of RKE, the default version of Kubernetes is version 1.11.5.
 
-If you want to display all versions of Kubernetes recognized by our version of RKE, we can do it with the following command:
+If you want to display all versions of Kubernetes known by our version of RKE, we can do it with the following command:
 
 ```shell
 $ rke config --system-images --all >/dev/null
@@ -280,12 +280,12 @@ INFO[0000] Generating images list for version [v1.8.11-rancher1]:
 ```
 
 {{% info %}}
-I have deliberately redirected the standard output to `/dev/null` order to simplify the return of the command by not displaying the so-called system images.
+I have deliberately redirected the standard output to `/dev/null` in order to simplify the return of the command by not displaying the system images.
 {{% /info %}}
 
-Even if we are not going to do it for our cluster, it is possible to configure the `cluster.yml` file to use another version of Kubernetes than the one proposed by default: https://rancher.com/docs/rke/v0.1.x/en/config-options/#kubernetes-version
+Even if we are not going to do it for our cluster, it is possible to configure the `cluster.yml` file to use another version of Kubernetes than the default one: https://rancher.com/docs/rke/v0.1.x/en/config-options/#kubernetes-version
 
-On the other hand, we will modify this `cluster.yml` file to no more impose images called system because it would prevent their climbs of version towards those of our new version of Kubernetes:
+However, we will modify this `cluster.yml` file to no more enforce the system images because it would prevent their upgrades to those of our new version of Kubernetes:
 
 ```yaml
 ...
@@ -440,7 +440,7 @@ INFO[0604] [addons] no user addons defined
 INFO[0604] Finished building Kubernetes cluster successfully
 ```
 
-We can finally confirm the transition to version 1.11.5 of Kubernetes by displaying the list of nodes of the cluster:
+We can finally confirm the transition to version 1.11.5 of Kubernetes by displaying the list of nodes in the cluster:
 
 ```shell
 $ kubectl --kubeconfig=kube_config_cluster.yml get nodes
@@ -451,7 +451,7 @@ minikluster-2   Ready     worker                     1d        v1.11.5
 
 This is the end of this intermission dedicated to the modification of our cluster. Next time we'll see how to use the Terraform tool to automate everything we've seen so far.
 
-If you have questions or comments, do not hesitate to leave me a comment.
+If you have questions or remarks, do not hesitate to leave me a comment.
 
 {{% info %}}
 This post was originally written in French and then translated into English with the help of [Google Translate](https://translate.google.com/).

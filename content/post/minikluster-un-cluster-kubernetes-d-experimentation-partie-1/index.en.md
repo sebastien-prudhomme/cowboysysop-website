@@ -13,9 +13,9 @@ tags:
 
 In this series of articles we will install a local Kubernetes cluster for experimentation.
 
-There are certainly solutions like [Minikube](https://kubernetes.io/docs/setup/minikube/) or [Minishift](https://www.okd.io/minishift/) that already allow to easily install Kubernetes on a local station but none to my knowledge proposes to install a cluster with several nodes as we will do.
+There are certainly solutions like [Minikube](https://kubernetes.io/docs/setup/minikube/) or [Minishift](https://www.okd.io/minishift/) that already allow to easily install Kubernetes on a local workstation but none to my knowledge proposes to install a cluster with several nodes as we will do.
 
-At first we will perform an installation of Kubernetes using the command line, without more automation than that. We will help with this the Docker Machine tool, the Linux RancherOS distribution and finally the Rancher Kubernetes Engine (RKE) tool.
+At first we will perform an installation of Kubernetes using the command line, without more automation than that. For that, we will use the Docker Machine tool, the Linux RancherOS distribution and finally the Rancher Kubernetes Engine (RKE) tool.
 
 In a second step we will see how to automate this installation using the Terraform tool, with the aim of creating, modifying and destroying the Kubernetes cluster as simply as possible following the Infrastructure As Code approach.
 
@@ -25,9 +25,9 @@ In order to proceed with the installation of our Kubernetes cluster, the followi
 
 * a Linux client machine with 16 GB of memory (do not expect anything below 8 GB)
 * the [VirtualBox](https://www.virtualbox.org/) virtualization solution installed and functional on the Linux computer (I will not go into the details, you will find everything you need on the official website)
-* basic knowledge of Docker containers and Kubernetes Orchestrator
+* basic knowledge of Docker containers and Kubernetes orchestrator
 
-The software used later is multi-platform, an installation on another type of OS (Mac OS, Windows) or on another hypervisor (KVM, VMware Fusion) should be possible by adapting the procedure.
+The softwares used later are multi-platform, so an installation on another type of OS (Mac OS, Windows) or on another hypervisor (KVM, VMware Fusion) should be possible by adapting the procedure.
 
 ## Kubernetes
 
@@ -38,10 +38,10 @@ The only Kubernetes element required on the client machine is the Kubectl comman
 For its installation, I suggest you go through this method of the official documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl
 
 {{% warning %}}
-**Warning**: be sure to select version 1.11.1 so that you do not have a bad surprise in the rest of this article.
+**Warning**: be sure to select version 1.11.1 so that you do not have a bad surprise in the remainder of this article.
 {{% /warning %}}
 
-Once installed, you can launch it to check that it works and you realize the various commands it offers:
+Once installed, you can launch it to check that it works and to see the various commands it offers:
 
 ```shell
 $ kubectl
@@ -123,7 +123,7 @@ It is compatible with a large number of cloud or private virtualization vendors:
 For its installation, I refer you to the official documentation:  https://docs.docker.com/machine/install-machine/
 
 {{% warning %}}
-**Warning**: be sure to select version 0.15.0 so that you will not have a bad surprise in the rest of this article.
+**Warning**: be sure to select version 0.15.0 so that you will not have a bad surprise in the remainder of this article.
 {{% /warning %}}
 
 As for Kubectl, you can check its operation by launching it without any special option:
@@ -185,16 +185,16 @@ Run 'docker-machine COMMAND --help' for more information on a command.
 
 [RancherOS](https://rancher.com/rancher-os/) is a lightweight Linux distribution specifically designed for hosting Docker containers.
 
-Unlike the Boot2docker image installed by Docker Machine by default, RancherOS can also serve as a system base for a production environment.
+Unlike the Boot2docker image installed by Docker Machine by default, RancherOS can also serve as a base system for a production environment.
 
-For example, RancherOS is compatible with cloud-init boot-configuration mechanisms as well as the VMware vSphere guestinfo mechanism.
+For example, RancherOS is compatible with cloud-init boot configuration mechanisms as well as the VMware vSphere guestinfo mechanism.
 
 RancherOS also has the advantage of being able to easily switch from one version of Docker to another, which we will do to stay in the recommended versions to run Kubernetes.
 
-For our experimental Kubernetes cluster, we will start by creating a first virtual machine with the help of Docker Machine by providing:
+For our Kubernetes cluster for experimentation, we will start by creating a first virtual machine with the help of Docker Machine by providing:
 
 * the virtualization solution used: VirtualBox
-* the download address of the ISO image of RancherOS (here in version 1.4.1)
+* the download URL of the RancherOS ISO image (here in version 1.4.1
 * the number of CPUs of the virtual machine: 1
 * the size of the virtual machine disk: about 10 GB
 * the size of the virtual machine memory: 2 GB
@@ -227,7 +227,7 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env minikluster-1
 ```
 
-We can then check the version of Docker installed by default under RancherOS by listing the virtual machines managed by Docker Machine:
+We can then check the version of Docker installed by default on RancherOS by listing the virtual machines managed by Docker Machine:
 
 ```shell
 $ docker-machine ls
@@ -235,7 +235,7 @@ NAME            ACTIVE   DRIVER       STATE     URL                         SWAR
 minikluster-1   -        virtualbox   Running   tcp://192.168.99.100:2376           v18.03.1-ce
 ```
 
-Since the Docker version 18.03.1-ce is not guaranteed to work with the version of Kubernetes 1.11 that we are going to deploy, we will replace it with the latest compatible version using the RancherOS configuration tool. , namely 17.03.2-this:
+Since the Docker version 18.03.1-ce is not guaranteed to work with the version of Kubernetes 1.11 that we are going to deploy, we will replace it with the latest compatible version using the RancherOS configuration tool, namely version 17.03.2-ce:
 
 ```shell
 $ docker-machine ssh minikluster-1 sudo ros engine switch docker-17.03.2-ce
@@ -261,7 +261,7 @@ We will add more virtual machines later, to show how the tool used to install Ku
 
 ![](rke.png)
 
-Rancher Kubernetes Engine, which we will call RKE afterwards, is the tool that will allow us to install a Kubernetes cluster on the virtual machines we have just created.
+Rancher Kubernetes Engine, which we will call RKE afterwards, is the tool that will allow us to install a Kubernetes cluster on the virtual machine we have just created.
 
 It has several significant advantages over other Kubernetes installation methods:
 
@@ -275,7 +275,7 @@ For its installation, as for Docker Machine, I refer you to the official documen
 **Warning**: please download version 0.1.9 to remain compatible with this article.
 {{% /warning %}}
 
-As with previously installed tools, you can then run the binary to check its operation and commands:
+As with previously installed tools, you can then run the binary to check its operation and its commands:
 
 ```shell
 $ rke
@@ -310,11 +310,11 @@ Once RKE is installed, you must create the YAML file that will be used to config
 In order to initialize this YAML file, we will use the configuration command present in the RKE binary, providing the following information and leaving the other parameters at their default value:
 
 * SSH address of the host: 192.168.99.100 (to be adapted according to what Docker Machine returns to you in its list of virtual machines)
-* path to the SSH private key of the host: ~ / .docker / machine / machines / minikluster-1 / id_rsa (created automatically by Docker Machine during the installation of the virtual machine)
+* path to the SSH private key of the host: ~/.docker/machine/machines/minikluster-1/id_rsa (created automatically by Docker Machine during the installation of the virtual machine)
 * SSH user of the host: docker (created automatically during the installation of RancherOS)
 * activation of the worker role (execution of Kubernetes orchestrated Docker containers): yes
-* activation of role etcd (Kubernetes internal database): yes
-* hostname overload: minikluster-1
+* activation of the etcd role (Kubernetes internal database): yes
+* hostname override: minikluster-1
 
 ```shell
 $ rke config
@@ -342,7 +342,7 @@ $ rke config
 [+] Add addon manifest URLs or YAML files [no]:
 ```
 
-The result of this command is in the form of a new file named `cluster.yml` in the current directory, file which contains in particular the information which we have just informed:
+The result of this command is in the form of a new file named `cluster.yml` in the current directory, file which contains in particular the information which we have just entered:
 
 ```yaml
 nodes:
@@ -508,9 +508,9 @@ rke-metrics-addon-deploy-job-2fscd        0/1       Completed   0          4m
 rke-network-plugin-deploy-job-bkrnw       0/1       Completed   0          4m
 ```
 
-And now, our Kubernetes cluster is now operational, for the moment on a single virtual machine, and that will be all for this first part.
+Voila, our Kubernetes cluster is now operational, right now on a single virtual machine, and that will be all for this first part.
 
-If you have questions or comments, do not hesitate to leave me a comment.
+If you have questions or remarks, do not hesitate to leave me a comment.
 
 {{% info %}}
 This post was originally written in French and then translated into English with the help of [Google Translate](https://translate.google.com/).

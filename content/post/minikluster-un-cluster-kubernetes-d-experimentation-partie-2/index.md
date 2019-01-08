@@ -223,7 +223,7 @@ Pour la version 0.1.9 de RKE, la version de Kubernetes par défaut est donc la v
 
 Nous allons à présent récupérer la version 0.1.14 de RKE : https://github.com/rancher/rke/releases/tag/v0.1.14
 
-La commande suivante nous permet d'afficher la version de Kubernetes installée par défaut ainsi que les images dite système que RKE va utiliser pour construire le cluster :
+La commande suivante nous permet d'afficher la version de Kubernetes installée par défaut ainsi que les images système que RKE va utiliser pour construire le cluster :
 
 ```shell
 $ rke config --system-images
@@ -279,12 +279,12 @@ INFO[0000] Generating images list for version [v1.8.11-rancher1]:
 ```
 
 {{% info %}}
-J'ai volontairement redirigé la sortie standard vers `/dev/null` afin de simplifier le retour de la commande en n'affichant pas les images dites système.
+J'ai volontairement redirigé la sortie standard vers `/dev/null` afin de simplifier le retour de la commande en n'affichant pas les images système.
 {{% /info %}}
 
 Même si nous n'allons pas le faire pour notre cluster, il est possible de configurer le fichier `cluster.yml` pour utiliser une autre version de Kubernetes que celle proposée par défaut : https://rancher.com/docs/rke/v0.1.x/en/config-options/#kubernetes-version
 
-Nous allons par contre modifier ce fichier `cluster.yml` pour ne plus imposer d'images dite système car cela empêcherais leurs montées de version vers celles de notre nouvelle version de Kubernetes :
+Nous allons par contre modifier ce fichier `cluster.yml` pour ne plus imposer d'images système car cela empêcherais leurs montées de version vers celles de notre nouvelle version de Kubernetes :
 
 ```yaml
 ...

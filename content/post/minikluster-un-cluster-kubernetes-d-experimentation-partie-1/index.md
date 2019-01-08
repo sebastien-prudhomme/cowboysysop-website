@@ -260,7 +260,7 @@ Nous rajouterons d’autres machines virtuelle plus tard, afin de montrer commen
 
 ![](rke.png)
 
-Rancher Kubernetes Engine, que nous appellerons RKE par la suite, est l’outil qui va nous permettre d’installer un cluster Kubernetes sur les machines virtuelles que nous venons de créer.
+Rancher Kubernetes Engine, que nous appellerons RKE par la suite, est l’outil qui va nous permettre d’installer un cluster Kubernetes sur la machine virtuelle que nous venons de créer.
 
 Il possède plusieurs atouts non négligeables par rapport à d’autres méthodes d’installation de Kubernetes :
 
@@ -507,6 +507,6 @@ rke-metrics-addon-deploy-job-2fscd        0/1       Completed   0          4m
 rke-network-plugin-deploy-job-bkrnw       0/1       Completed   0          4m
 ```
 
-Et voila, notre cluster Kubernetes est à présent opérationnel, pour l’instant sur une seule machine virtuelle, et ce sera tout pour cette première partie.
+Voila, notre cluster Kubernetes est à présent opérationnel, pour l’instant sur une seule machine virtuelle, et ce sera tout pour cette première partie.
 
 Si vous avez des questions ou des remarques, n’hésitez pas à me laisser un commentaire.
