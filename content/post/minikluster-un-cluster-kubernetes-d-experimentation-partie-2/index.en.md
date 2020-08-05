@@ -2,9 +2,9 @@
 title: "Minikluster: a Kubernetes cluster for experimentation (part 2)"
 url: en/post/minikluster-a-kubernetes-cluster-for-experimentation-part-2
 date: 2018-12-29
-image: post/minikluster-a-kubernetes-cluster-for-experimentation-part-2/chuttersnap-255215-unsplash.jpg
+image: en/post/minikluster-a-kubernetes-cluster-for-experimentation-part-2/banner.jpg
 bigimg:
-- src: chuttersnap-255215-unsplash.jpg
+- src: banner.jpg
 tags:
 - Docker
 - Kubernetes
