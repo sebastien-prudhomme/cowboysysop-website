@@ -37,9 +37,9 @@ The only Kubernetes element required on the client machine is the Kubectl comman
 
 For its installation, I suggest you go through this method of the official documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl
 
-{{% warning %}}
+{{< warning >}}
 **Warning**: be sure to select version 1.11.1 so that you do not have a bad surprise in the remainder of this article.
-{{% /warning %}}
+{{< /warning >}}
 
 Once installed, you can launch it to check that it works and to see the various commands it offers:
 
@@ -122,9 +122,9 @@ It is compatible with a large number of cloud or private virtualization vendors:
 
 For its installation, I refer you to the official documentation:  https://docs.docker.com/machine/install-machine/
 
-{{% warning %}}
+{{< warning >}}
 **Warning**: be sure to select version 0.15.0 so that you will not have a bad surprise in the remainder of this article.
-{{% /warning %}}
+{{< /warning >}}
 
 As for Kubectl, you can check its operation by launching it without any special option:
 
@@ -271,9 +271,9 @@ It has several significant advantages over other Kubernetes installation methods
 
 For its installation, as for Docker Machine, I refer you to the official documentation: https://rancher.com/docs/rke/v0.1.x/en/installation/#download-the-rke-binary
 
-{{% warning %}}
+{{< warning >}}
 **Warning**: please download version 0.1.9 to remain compatible with this article.
-{{% /warning %}}
+{{< /warning >}}
 
 As with previously installed tools, you can then run the binary to check its operation and its commands:
 
@@ -512,6 +512,6 @@ Voila, our Kubernetes cluster is now operational, right now on a single virtual 
 
 If you have questions or remarks, do not hesitate to leave me a comment.
 
-{{% info %}}
+{{< info >}}
 This post was originally written in French and then translated into English with the help of [Google Translate](https://translate.google.com/).
-{{% /info %}}
+{{< /info >}}

@@ -279,9 +279,9 @@ INFO[0000] Generating images list for version [v1.10.11-rancher1-1]:
 INFO[0000] Generating images list for version [v1.8.11-rancher1]:
 ```
 
-{{% info %}}
+{{< info >}}
 I have deliberately redirected the standard output to `/dev/null` in order to simplify the return of the command by not displaying the system images.
-{{% /info %}}
+{{< /info >}}
 
 Even if we are not going to do it for our cluster, it is possible to configure the `cluster.yml` file to use another version of Kubernetes than the default one: https://rancher.com/docs/rke/v0.1.x/en/config-options/#kubernetes-version
 
@@ -453,6 +453,6 @@ This is the end of this intermission dedicated to the modification of our cluste
 
 If you have questions or remarks, do not hesitate to leave me a comment.
 
-{{% info %}}
+{{< info >}}
 This post was originally written in French and then translated into English with the help of [Google Translate](https://translate.google.com/).
-{{% /info %}}
+{{< /info >}}

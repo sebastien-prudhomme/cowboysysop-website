@@ -278,9 +278,9 @@ INFO[0000] Generating images list for version [v1.10.11-rancher1-1]:
 INFO[0000] Generating images list for version [v1.8.11-rancher1]:
 ```
 
-{{% info %}}
+{{< info >}}
 J'ai volontairement redirigé la sortie standard vers `/dev/null` afin de simplifier le retour de la commande en n'affichant pas les images système.
-{{% /info %}}
+{{< /info >}}
 
 Même si nous n'allons pas le faire pour notre cluster, il est possible de configurer le fichier `cluster.yml` pour utiliser une autre version de Kubernetes que celle proposée par défaut : https://rancher.com/docs/rke/v0.1.x/en/config-options/#kubernetes-version
 
