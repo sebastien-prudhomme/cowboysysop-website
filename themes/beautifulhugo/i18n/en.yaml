@@ -33,7 +33,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: 'Powered by <a href="http://gohugo.io">Hugo</a> &nbsp;&bull;&nbsp; Theme by <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+  translation: 'Powered by <a href="https://gohugo.io">Hugo</a> &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
 
 # Navigation
 - id: toggleNavigation
