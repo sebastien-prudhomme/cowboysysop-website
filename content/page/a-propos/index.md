@@ -1,5 +1,6 @@
 ---
 title: "À propos"
+socialShare: false
 ---
 
 # Éditeur

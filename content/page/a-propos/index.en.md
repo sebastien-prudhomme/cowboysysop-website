@@ -1,6 +1,7 @@
 ---
 title: "About"
 url: page/about
+socialShare: false
 ---
 
 # Publisher
