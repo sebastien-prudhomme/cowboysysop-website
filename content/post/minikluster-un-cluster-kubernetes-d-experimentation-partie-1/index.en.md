@@ -19,7 +19,7 @@ At first we will perform an installation of Kubernetes using the command line, w
 
 In a second step we will see how to automate this installation using the Terraform tool, with the aim of creating, modifying and destroying the Kubernetes cluster as simply as possible following the Infrastructure As Code approach.
 
-## Prerequisites
+# Prerequisites
 
 In order to proceed with the installation of our Kubernetes cluster, the following prerequisites are required:
 
@@ -29,7 +29,7 @@ In order to proceed with the installation of our Kubernetes cluster, the followi
 
 The softwares used later are multi-platform, so an installation on another type of OS (Mac OS, Windows) or on another hypervisor (KVM, VMware Fusion) should be possible by adapting the procedure.
 
-## Kubernetes
+# Kubernetes
 
 ![](kubernetes.png)
 
@@ -112,7 +112,7 @@ Use "kubectl <command> --help" for more information about a given command.
 Use "kubectl options" for a list of global command-line options (applies to all commands).
 ```
 
-## Docker Machine
+# Docker Machine
 
 ![](docker-machine.png)
 
@@ -179,7 +179,7 @@ Commands:
 Run 'docker-machine COMMAND --help' for more information on a command.
 ```
 
-## RancherOS
+# RancherOS
 
 ![](rancheros.png)
 
@@ -257,7 +257,7 @@ time="2018-09-30T21:13:22Z" level=info msg="[1/18] [docker]: Started "
 
 We will add more virtual machines later, to show how the tool used to install Kubernetes can expand an already existing cluster without any difficulty.
 
-## Rancher Kubernetes Engine (RKE)
+# Rancher Kubernetes Engine (RKE)
 
 ![](rke.png)
 

@@ -13,7 +13,7 @@ tags:
 
 Continuation of the construction of our Kubernetes cluster for experimentation: a small intermission to show you how to easily add a virtual machine to the Kubernetes cluster and how to update the Kubernetes version.
 
-## Preparing a new virtual machine
+# Preparing a new virtual machine
 
 We will first create a new virtual machine with the help of Docker Machine by providing it the same parameters as the existing virtual machine:
 
@@ -45,7 +45,7 @@ minikluster-1   -        virtualbox   Running   tcp://192.168.99.100:2376       
 minikluster-2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.03.2-ce
 ```
 
-## Adding the virtual machine to the cluster
+# Adding the virtual machine to the cluster
 
 The first step in expanding our cluster is to edit the `cluster.yml` file previously created in the current directory to add our new virtual machine to the `nodes` list.
 
@@ -214,7 +214,7 @@ rke-metrics-addon-deploy-job-fcjxx        0/1       Completed   0          27d
 rke-network-plugin-deploy-job-nwgz9       0/1       Completed   0          27d
 ```
 
-## Upgrading the cluster
+# Upgrading the cluster
 
 Now that we have expanded our cluster, we will as easily upgrade the Kubernetes software.
 

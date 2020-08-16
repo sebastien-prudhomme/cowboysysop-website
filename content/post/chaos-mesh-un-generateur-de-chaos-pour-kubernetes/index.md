@@ -21,7 +21,7 @@ Pour plus d'informations sur le sujet, je vous renvoie notamment à ces articles
 * [Chaos Engineering sur des pannes d’infrastructure](https://blog.octo.com/chaos-engineering-sur-des-pannes-dinfrastructure/) par David Shen sur le blog de Octo
 * [Chaos engineering avec Adrian Hornsby](https://electro-monkeys.fr/?p=290) sur le podcast de Electro Monkeys
 
-## Installation
+# Installation
 
 Pour procéder à l'installation de Chaos Mesh, je vais utiliser le chart Helm mis à disposition par les développeurs de l'outil.
 
