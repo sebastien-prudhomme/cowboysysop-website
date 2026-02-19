@@ -11,6 +11,6 @@ socialShare: false
 
 # Hébergement web
 
-**Nom** : Netlify Inc  
-**Adresse** : 2325 3rd Street Suite 215 San Francisco California 94107 USA  
-**Téléphone** : +1 844 899 7312
+**Nom** : Hetzner Online GmbH
+**Adresse** : Industriestraße 25 91710 Gunzenhausen Allemagne
+**Téléphone** : +49 (0)9831 505-0
