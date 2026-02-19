@@ -1,0 +1,7 @@
+providers = ["staticfile"]
+
+[phases.setup]
+nixPkgs = ["...", "hugo"]
+
+[phases.build]
+cmds = ["hugo"]
