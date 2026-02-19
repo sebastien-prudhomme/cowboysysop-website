@@ -10,8 +10,8 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
-disqusShortname = "cowboysysop"
-googleAnalytics = "UA-129648198-1"
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
