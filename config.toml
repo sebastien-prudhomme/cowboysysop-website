@@ -1,4 +1,4 @@
-baseurl = "https://www.cowboysysop.com"
+baseurl = "https://dev.cowboysysop.com"
 DefaultContentLanguage = "fr"
 #DefaultContentLanguage = "ja"
 title = "Cowboy Sysop"
