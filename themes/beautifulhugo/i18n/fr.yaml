@@ -4,9 +4,9 @@
 - id: shortdateFormat
   translation: "2 Jan 2006 15:04:05"
 - id: postedOnDate
-  translation: "Posté le {{ .Count }}"
+  translation: "Publié le {{ . }}"
 - id: lastModified
-  translation: "(Dernière modification le {{ .Count }})"
+  translation: "Mis à jour le {{ . }}"
 - id: translationsLabel
   translation: "Autres langues : "
 - id: translationsSeparator
@@ -37,7 +37,7 @@
 
 # Navigation
 - id: toggleNavigation
-  translation: "Toggle navigation"
+  translation: "Activer la navigation"
 - id: languageSwitcherLabel
   translation: "Langue"
 - id: gcseLabelShort
@@ -59,7 +59,7 @@
 - id: yourName
   translation: "Votre nom"
 - id: yourEmail
-  translation: "Votre addresse mail"
+  translation: "Votre adresse mail"
 - id: yourWebsite
   translation: "Votre site web"
 

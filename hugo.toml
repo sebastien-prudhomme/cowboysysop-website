@@ -1,17 +1,22 @@
 baseurl = "https://dev.cowboysysop.com"
 DefaultContentLanguage = "fr"
-#DefaultContentLanguage = "ja"
 title = "Cowboy Sysop"
+# Using theme as git submodule
 theme = "beautifulhugo"
-metaDataFormat = "yaml"
+# Or when using theme as hugo module
+# theme = "github.com/halogenica/beautifulhugo"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+
+[Services]
+  [Services.Disqus]
+    # Shortname = "XXX"
+  [Services.googleAnalytics]
+    # id = "XXX"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
@@ -19,18 +24,20 @@ pygmentsCodefencesGuessSyntax = true
   mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
   readingTime = true
-  wordCount = false
-  fuzzyWordCount = true
+  wordCount = true
   useHLJS = true
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
+#  cusdisID = "XXX" # Get your App id from cusdis.com
 #  hideAuthor = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+#  disclaimerText = "The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way."
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
@@ -44,14 +51,13 @@ pygmentsCodefencesGuessSyntax = true
 #  src = "img/hexagon.jpg"
 #  desc = "Hexagon"
 
-[Author]
+[Params.author]
+  # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
   name = "Sébastien Prud'homme"
   website = "https://www.cowboysysop.com"
   email = "sebastien.prudhomme@gmail.com"
   github = "sebastien-prudhomme"
-  gitlab = "sebastien.prudhomme"
-  twitter = "CowboySysop"
-  linkedin = "sébastien-prud-homme-289b71147"
+  linkedin = "sébastien-prudhomme"
 
 [[languages.fr.menu.main]]
     name = "Blog"

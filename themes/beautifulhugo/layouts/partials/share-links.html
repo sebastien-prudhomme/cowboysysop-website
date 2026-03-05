@@ -4,7 +4,7 @@
     <ul class="share">
       <!-- Twitter -->
       <li>
-        <a href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Author.twitter }}" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Params.author.twitter }}" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -13,6 +13,13 @@
       <li>
         <a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+
+      <!-- Email -->
+      <li>
+        <a href="mailto:?body={{ .Permalink }}&amp;subject={{ .Title }}" title="Share via email">
+          <i class="fab fa-at"></i>
         </a>
       </li>
     </ul>
