@@ -2,6 +2,7 @@ providers = ["staticfile"]
 
 [phases.setup]
 nixPkgs = ["...", "hugo"]
+nixpkgsArchive = "2baf5c338b8e7b18d8e610df4ed6eb6621779b6a"
 
 [phases.build]
 cmds = ["hugo"]
