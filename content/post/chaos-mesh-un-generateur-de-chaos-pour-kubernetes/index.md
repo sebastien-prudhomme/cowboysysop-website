@@ -1,9 +1,9 @@
 ---
 title: "Chaos Mesh : un générateur de chaos pour Kubernetes"
 date: 2020-08-09
-image: post/chaos-mesh-un-generateur-de-chaos-pour-kubernetes/banner.jpg
+image: /post/chaos-mesh-un-generateur-de-chaos-pour-kubernetes/banner.jpg
 bigimg:
-- src: banner.jpg
+- src: /post/chaos-mesh-un-generateur-de-chaos-pour-kubernetes/banner.jpg
 tags:
 - Chaos
 - Kubernetes

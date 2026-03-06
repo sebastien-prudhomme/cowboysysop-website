@@ -1,9 +1,9 @@
 ---
 title: "Minikluster : un cluster Kubernetes d’expérimentation (partie 1)"
 date: 2018-10-27
-image: post/minikluster-un-cluster-kubernetes-d-experimentation-partie-1/banner.jpg
+image: /post/minikluster-un-cluster-kubernetes-d-experimentation-partie-1/banner.jpg
 bigimg:
-- src: banner.jpg
+- src: /post/minikluster-un-cluster-kubernetes-d-experimentation-partie-1/banner.jpg
 tags:
 - Docker
 - Kubernetes

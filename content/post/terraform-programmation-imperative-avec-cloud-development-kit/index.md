@@ -1,9 +1,9 @@
 ---
 title: "Terraform : programmation impérative avec Cloud Development Kit"
 date: 2020-09-05
-image: post/terraform-programmation-imperative-avec-cloud-development-kit/banner.jpg
+image: /post/terraform-programmation-imperative-avec-cloud-development-kit/banner.jpg
 bigimg:
-- src: banner.jpg
+- src: /post/terraform-programmation-imperative-avec-cloud-development-kit/banner.jpg
 tags:
 - DevOps
 - InfrastructureAsCode
