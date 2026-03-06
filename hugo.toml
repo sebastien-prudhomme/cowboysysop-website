@@ -1,4 +1,4 @@
-baseurl = "https://dev.cowboysysop.com"
+baseurl = "https://www.cowboysysop.com"
 DefaultContentLanguage = "fr"
 title = "Cowboy Sysop"
 # Using theme as git submodule
