@@ -1,9 +1,6 @@
 ---
 title: "Chaos Mesh : un générateur de chaos pour Kubernetes"
 date: 2020-08-09
-image: /post/chaos-mesh-un-generateur-de-chaos-pour-kubernetes/banner.jpg
-bigimg:
-- src: /post/chaos-mesh-un-generateur-de-chaos-pour-kubernetes/banner.jpg
 tags:
 - Chaos
 - Kubernetes
@@ -85,7 +82,7 @@ chaos-daemon-x2rkr                          1/1     Running   0          2m
 
 Nous pouvons aussi utiliser un outil graphique comme [KubeView](https://github.com/benc-uk/kubeview) pour visualiser l'état des pods :
 
-{{< figure src="kubeview.png" >}}
+{{< figure src="kubeview.webp" >}}
 
 L'architecture applicative de Chaos Mesh est constituée des composants suivants:
 
@@ -215,7 +212,7 @@ networkchaos.chaos-mesh.org/network-delay-web-show created
 
 Ne reste plus ensuite qu'à se connecter sur le port HTTP `8081` de l'application `web-show`, éventuellement à l'aide d'un `kubectl port-forward svc/web-show 8081`, pour constater l'effet du chaos sur la latence du ping : 
 
-{{< figure src="web-show.png" >}}
+{{< figure src="web-show.webp" >}}
 
 # Tableau de bord
 
@@ -230,7 +227,7 @@ Il est accessible sur le port HTTP `2333`, en s'aidant si nécessaire de la comm
 
 Ici la fiche web de l'expérimentation que nous avons déployée précédemment :
 
-{{< figure src="chaos-dashboard.png" >}}
+{{< figure src="chaos-dashboard.webp" >}}
 
 # Plugin Grafana
 
@@ -264,7 +261,7 @@ Les données de Chaos Mesh sont exploitables dans Grafana sous deux formes :
 **Attention** : j'ai dû augmenter la durée de l'expérimentation pour afficher correctement le graphe suivant, en raison d'un soucis de remontée des données dès que la période affichée devenait trop courte.
 {{< /info >}}
 
-{{< figure src="grafana.png" >}}
+{{< figure src="grafana.webp" >}}
 
 # Conclusion
 
