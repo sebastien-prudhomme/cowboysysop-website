@@ -1,9 +1,6 @@
 ---
 title: "Minikluster : un cluster Kubernetes d’expérimentation (partie 1)"
 date: 2018-10-27
-image: /post/minikluster-un-cluster-kubernetes-d-experimentation-partie-1/banner.jpg
-bigimg:
-- src: /post/minikluster-un-cluster-kubernetes-d-experimentation-partie-1/banner.jpg
 tags:
 - Docker
 - Kubernetes
@@ -30,7 +27,7 @@ Les logiciels utilisés par la suite étant multi-plateformes, une installation 
 
 # Kubernetes
 
-![](kubernetes.png)
+![](kubernetes.webp)
 
 Le seul élément de Kubernetes nécessaire sur le poste client est l’outil en ligne de commande Kubectl.
 
@@ -113,7 +110,7 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 
 # Docker Machine
 
-![](docker-machine.png)
+![](docker-machine.webp)
 
 [Docker Machine](https://docs.docker.com/machine/) est un outil qui va nous permettre de créer facilement les machines virtuelles qui serviront à l’hébergement de Kubernetes et de les équiper du Docker Engine.
 
@@ -180,7 +177,7 @@ Run 'docker-machine COMMAND --help' for more information on a command.
 
 # RancherOS
 
-![](rancheros.png)
+![](rancheros.webp)
 
 [RancherOS](https://rancher.com/rancher-os/) est une distribution Linux légère spécialement conçue pour l’hébergement de containers Docker.
 
@@ -258,7 +255,7 @@ Nous rajouterons d’autres machines virtuelle plus tard, afin de montrer commen
 
 # Rancher Kubernetes Engine (RKE)
 
-![](rke.png)
+![](rke.webp)
 
 Rancher Kubernetes Engine, que nous appellerons RKE par la suite, est l’outil qui va nous permettre d’installer un cluster Kubernetes sur la machine virtuelle que nous venons de créer.
 

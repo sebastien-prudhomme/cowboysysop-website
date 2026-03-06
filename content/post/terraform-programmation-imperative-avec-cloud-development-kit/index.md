@@ -1,9 +1,6 @@
 ---
 title: "Terraform : programmation impérative avec Cloud Development Kit"
 date: 2020-09-05
-image: /post/terraform-programmation-imperative-avec-cloud-development-kit/banner.jpg
-bigimg:
-- src: /post/terraform-programmation-imperative-avec-cloud-development-kit/banner.jpg
 tags:
 - DevOps
 - InfrastructureAsCode
@@ -355,7 +352,7 @@ A noter un défaut de jeunesse dans l'affichage des listes en sortie mais rien d
 
 On peut ensuite se connecter sur la console d'administration Scaleway pour vérifier que les serveurs ont bien été créés :
 
-{{< figure src="scaleway.png" >}}
+{{< figure src="scaleway.webp" >}}
 
 Enfin pour détruire notre infrastructure, c'est la commande ```cdktf destroy``` qui remplace la commande ```terraform destroy``` habituelle : 
 
