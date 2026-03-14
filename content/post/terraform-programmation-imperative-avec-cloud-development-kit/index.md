@@ -28,7 +28,7 @@ A noter que ce projet est basé sur les mêmes composants techniques que AWS uti
 
 Dans cet article je vais vous présenter une petite infrastructure hébergée chez [Scaleway](https://www.scaleway.com/), décrite d'abord dans le langage dédié de Terraform puis son adaptation en TypeScript à l'aide de CDK for Terraform.
 
-# Utilisation de HCL avec Terraform
+## Utilisation de HCL avec Terraform
 
 Les ressources que l'on va gérer sont les suivantes :
 
@@ -111,13 +111,13 @@ A noter l'utilisation de variables d'environnement pour les secrets permettant l
 
 L'application de ce code source se fait avec les commandes ```terraform plan```, ```terraform apply``` et ```terraform destroy``` habituelles. 
 
-# Utilisation de TypeScript avec CDK for Terraform
+## Utilisation de TypeScript avec CDK for Terraform
 
 {{< info >}}
 A noter que CDK for Terraform propose également Python comme possible langage.
 {{< /info >}}
 
-## Installation de CDK for Terraform
+### Installation de CDK for Terraform
 
 L'utilisation de CDK for Terraform en langage TypeScript nécessite quelques pré-requis :
 
@@ -131,7 +131,7 @@ La première opération que nous allons lancer est l'installation globale, au ni
 $ sudo npm install -g cdktf-cli
 ```
 
-## Préparation du projet
+### Préparation du projet
 
 Nous allons ensuite initialiser notre projet CDK for Terraform en précisant, pour cet exemple, de ne pas s'interfacer avec le service en ligne Terraform Cloud :
 
@@ -176,7 +176,7 @@ new MyStack(app, 'cdktf-scaleway');
 app.synth();
 ```
 
-## Ajout du provider Scaleway
+### Ajout du provider Scaleway
 
 Comme expliqué plus haut, le projet CDK for Terraform est pré-configuré avec AWS. Nous allons donc ajouter le provider Scaleway dans son fichier de configuration JSON :
 
@@ -211,7 +211,7 @@ data-scaleway-image.ts            data-scaleway-registry-image-beta.ts      inst
 data-scaleway-instance-image.ts   data-scaleway-registry-namespace-beta.ts  instance-security-group-rules.ts  k8s-pool-beta.ts            rdb-instance-beta.ts    token.ts
 ```
 
-## Ajout du code TypeScript
+### Ajout du code TypeScript
 
 Tout est prêt maintenant pour déclarer notre infrastructure dans le fichier ```main.ts```, par exemple de cette façon :
 
@@ -299,7 +299,7 @@ On peut noter comme différences par rapport au langage HCL :
 
 Pour ce dernier point qui peut être délicat, se référer à la [documentation](https://github.com/hashicorp/terraform-cdk/blob/master/docs/working-with-cdk-for-terraform/tokens.md) pour en savoir plus.
 
-## Gestion de notre infrastructure
+### Gestion de notre infrastructure
 
 La première façon d'appliquer le code source TypeScript est de lancer la commande ```cdktf synth``` afin de de générer dans le répertoire ```cdktf.out``` du code compatible avec les commandes ```terraform``` habituelles.
 
@@ -374,7 +374,7 @@ Resources
 Summary: 6 destroyed.
 ```
 
-# Conclusion
+## Conclusion
 
 Comme on a pu le voir à travers cet exemple, il est très aisé de passer d'une infrastructure décrite dans le langage HCL de Terraform à une infrastructure décrite en TypeScript à l'aide de CDK for Terraform.
 

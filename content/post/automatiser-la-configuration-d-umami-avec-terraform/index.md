@@ -18,7 +18,7 @@ Faut-il pour autant repasser par des clics dans l'interface web ou des scripts m
 
 Dans cet article, je vais vous montrer comment contourner cette limitation en utilisant des providers Terraform génériques pour interagir directement avec l'API Umami.
 
-# Les providers nécessaires
+## Les providers nécessaires
 
 Puisque nous n'avons pas de provider dédié, nous allons nous appuyer sur deux providers, l'un officiel, l'autre communautaire, pour effectuer des appels HTTP et manipuler des API RESTful :
 
@@ -41,7 +41,7 @@ terraform {
 * Le provider `http` va nous servir à l'authentification initiale.
 * Le provider `restful` est un provider très puissant qui permet de créer, lire, mettre à jour et supprimer des ressources sur n'importe quelle API respectant les standards RESTful.
 
-# Authentification à l'API Umami
+## Authentification à l'API Umami
 
 L'API Umami requiert l'utilisation d'un token d'authentification pour chaque requête. Avant de pouvoir créer nos sites web, nous devons donc récupérer ce token.
 
@@ -87,7 +87,7 @@ La réponse au format JSON de cet appel HTTP contient le fameux token.
 
 Nous utilisons une variable locale `umami_token` associée à la fonction `jsondecode` pour l'extraire et le rendre facilement utilisable par la suite.
 
-# Configuration du provider RESTful
+## Configuration du provider RESTful
 
 Maintenant que nous avons notre token, nous pouvons configurer le provider `restful` :
 
@@ -114,7 +114,7 @@ L'alias permet de créer une instance spécifique du provider, configurée exclu
 
 Cela permet de référencer cette configuration lors de la déclaration de nos ressources, évitant ainsi tout conflit ou effet de bord indésirable.
 
-# Gérer les sites web dans Umami
+## Gérer les sites web dans Umami
 
 Avec notre provider prêt à l'emploi, nous pouvons maintenant déclarer un site web.
 
@@ -142,7 +142,7 @@ Détaillons les paramètres de cette ressource :
 * `update_method = "POST"` : l'API Umami utilise de manière non standard la méthode POST pour les mises à jour, d'où la nécessité de forcer ce paramètre
 * `body` : le contenu JSON envoyé, décrivant les caractéristiques de notre site web
 
-# Importer des ressources existantes
+## Importer des ressources existantes
 
 Si vous avez déjà créé des sites web à la main dans votre instance Umami et que vous souhaitez les rapatrier sous Terraform, le provider `restful` gère parfaitement l'importation de l'existant.
 
@@ -165,7 +165,7 @@ import {
 
 L'identifiant d'importation attendu par ce provider `restful` est particulier : c'est un objet JSON qui renseigne le chemin exact de la ressource, le chemin de base et enfin le squelette de l'objet attendu.
 
-# Conclusion
+## Conclusion
 
 Grâce à la flexibilité de Terraform et de ses providers génériques, l'absence de provider officiel n'est pas un obstacle bloquant.
 

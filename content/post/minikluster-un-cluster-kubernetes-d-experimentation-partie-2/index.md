@@ -9,7 +9,7 @@ tags:
 
 Suite de la construction de notre cluster Kubernetes d’expérimentation : un petit entracte pour vous montrer comment on peut très facilement ajouter une machine virtuelle au cluster Kubernetes et comment on peut mettre à jour la version de Kubernetes.
 
-# Préparation d’une nouvelle machine virtuelle
+## Préparation d’une nouvelle machine virtuelle
 
 Nous allons d’abord créer une nouvelle machine virtuelle avec l’aide de Docker Machine en lui fournissant les mêmes caractéristiques que la machine virtuelle existante :
 
@@ -41,7 +41,7 @@ minikluster-1   -        virtualbox   Running   tcp://192.168.99.100:2376       
 minikluster-2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.03.2-ce
 ```
 
-# Ajout de la machine virtuelle au cluster
+## Ajout de la machine virtuelle au cluster
 
 La première étape pour l'agrandissement de notre cluster est d'éditer le fichier `cluster.yml` précemment créé dans le repertoire courant afin d'ajouter notre nouvelle machine virtuelle dans la liste des `nodes`.
 
@@ -210,7 +210,7 @@ rke-metrics-addon-deploy-job-fcjxx        0/1       Completed   0          27d
 rke-network-plugin-deploy-job-nwgz9       0/1       Completed   0          27d
 ```
 
-# Montée de version du cluster
+## Montée de version du cluster
 
 Maintenant que nous avons agrandi notre cluster, nous allons tout aussi simplement effectuer une montée de version du logiciel Kubernetes.
 
