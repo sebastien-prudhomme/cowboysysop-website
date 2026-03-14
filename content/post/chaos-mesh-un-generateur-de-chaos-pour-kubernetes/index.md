@@ -18,7 +18,7 @@ Pour plus d'informations sur le sujet, je vous renvoie notamment à ces articles
 * [Chaos Engineering sur des pannes d’infrastructure](https://blog.octo.com/chaos-engineering-sur-des-pannes-dinfrastructure/) par David Shen sur le blog de Octo
 * [Chaos engineering avec Adrian Hornsby](https://electro-monkeys.fr/?p=290) sur le podcast de Electro Monkeys
 
-# Installation
+## Installation
 
 Pour procéder à l'installation de Chaos Mesh, je vais utiliser le chart Helm mis à disposition par les développeurs de l'outil.
 
@@ -94,7 +94,7 @@ L'architecture applicative de Chaos Mesh est constituée des composants suivants
 **Attention** : le contrôleur va communiquer avec le daemon déployé sur chaque machine en se connectant sur le port `31767` de l'IP principale de la machine. Il faut veiller à ce que ce port ne soit pas filtré au niveau réseau.
 {{< /warning >}}
 
-# Expérimentations
+## Expérimentations
 
 Dans Chaos Mesh les types d'expérimentation sont mis en œuvre sous forme de CustomResourceDefinitions.
 
@@ -118,7 +118,7 @@ La liste des expérimentations possibles est déjà très riche et couvre un spe
 |                |                     | Ajouter des erreurs d'entrées/sorties       |
 | `KernelChaos`  | Le noyau Linux      | Ajouter des erreurs dans les appels système |
 
-# Exemple d'expérimentation
+## Exemple d'expérimentation
 
 {{< info >}}
 **Attention** : j'ai rencontré des soucis de stabilité avec la CustomResourceDefinition `StressChaos` que je comptais utiliser dans un premier temps comme exemple.
@@ -214,7 +214,7 @@ Ne reste plus ensuite qu'à se connecter sur le port HTTP `8081` de l'applicatio
 
 {{< figure src="web-show.webp" >}}
 
-# Tableau de bord
+## Tableau de bord
 
 Comme indiqué au moment de l'installation, j'ai activé le déploiement du tableau de bord de Chaos Mesh.
 
@@ -229,7 +229,7 @@ Ici la fiche web de l'expérimentation que nous avons déployée précédemment 
 
 {{< figure src="chaos-dashboard.webp" >}}
 
-# Plugin Grafana
+## Plugin Grafana
 
 Si vous disposez d'une infrastructure de supervision Prometheus/Grafana dans votre cluster Kubernetes, sachez qu'il existe également un plugin Grafana en cours de développement.
 
@@ -263,7 +263,7 @@ Les données de Chaos Mesh sont exploitables dans Grafana sous deux formes :
 
 {{< figure src="grafana.webp" >}}
 
-# Conclusion
+## Conclusion
 
 Parmi les logiciels libres de Chaos Engineering dont j'ai connaissance sur Kubernetes, et malgré les quelques soucis techniques rencontrés, Chaos Mesh tiens pour moi le haut du pavé de part ses fonctionnalités et de part la diversité des expérimentations qu'il propose.
 

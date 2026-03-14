@@ -3,13 +3,13 @@ title: "À propos"
 socialShare: false
 ---
 
-# Éditeur
+## Éditeur
 
 **Nom** : Sébastien Prud'homme  
 **Adresse** : 5 avenue Assolelhat Apt K09 31320 Castanet-Tolosan France  
 **Email** : sebastien.prudhomme@gmail.com
 
-# Hébergement web
+## Hébergement web
 
 **Nom** : Hetzner Online GmbH
 **Adresse** : Industriestraße 25 91710 Gunzenhausen Allemagne

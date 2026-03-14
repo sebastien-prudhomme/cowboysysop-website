@@ -4,13 +4,13 @@ url: page/about
 socialShare: false
 ---
 
-# Publisher
+## Publisher
 
 **Name**: Sébastien Prud'homme  
 **Address**: 5 avenue Assolelhat Apt K09 31320 Castanet-Tolosan France  
 **Email**: sebastien.prudhomme@gmail.com
 
-# Web hosting
+## Web hosting
 
 **Name**: Hetzner Online GmbH
 **Address**: Industriestraße 25 91710 Gunzenhausen Germany

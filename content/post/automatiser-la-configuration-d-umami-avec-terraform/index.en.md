@@ -19,7 +19,7 @@ Does this mean we have to revert to clicking through the web interface or writin
 
 In this article, I will show you how to work around this limitation by using generic Terraform providers to interact directly with the Umami API.
 
-# Required providers
+## Required providers
 
 Since we don't have a dedicated provider, we will rely on two providers, one official, one community-supported, to make HTTP calls and interact with RESTful APIs:
 
@@ -42,7 +42,7 @@ terraform {
 * The `http` provider will be used for initial authentication.
 * The `restful` provider is a very powerful provider that allows creating, reading, updating, and deleting resources on any API that complies with RESTful standards.
 
-# Authenticating with the Umami API
+## Authenticating with the Umami API
 
 The Umami API requires the use of an authentication token for each request. Before we can create our websites, we need to retrieve this token.
 
@@ -88,7 +88,7 @@ The JSON response of this HTTP call contains the token.
 
 We use a local variable `umami_token` paired with the `jsondecode` function to extract it and make it easily usable later.
 
-# Configuring the RESTful provider
+## Configuring the RESTful provider
 
 Now that we have our token, we can configure the `restful` provider:
 
@@ -115,7 +115,7 @@ The alias allows creating a specific instance of the provider, configured exclus
 
 This makes it possible to reference this configuration when declaring our resources, thereby avoiding any conflicts or unwanted side effects.
 
-# Managing websites in Umami
+## Managing websites in Umami
 
 With our provider ready to go, we can now declare a website.
 
@@ -143,7 +143,7 @@ Let's break down the parameters of this resource:
 * `update_method = "POST"`: the Umami API uses the POST method for updates in a non-standard way, hence the need to force this parameter
 * `body`: the JSON content sent, describing the characteristics of our website
 
-# Importing existing resources
+## Importing existing resources
 
 If you have already created websites manually in your Umami instance and want to bring them under Terraform management, the `restful` provider handles importing existing resources perfectly.
 
@@ -166,7 +166,7 @@ import {
 
 The import identifier expected by this `restful` provider is quite specific: it's a JSON object providing the exact resource path, the base path, and finally the skeleton of the expected object.
 
-# Conclusion
+## Conclusion
 
 Thanks to the flexibility of Terraform and its generic providers, the lack of an official provider is not a blocking issue.
 
